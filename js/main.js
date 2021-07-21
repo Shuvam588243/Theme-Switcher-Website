@@ -11,6 +11,9 @@ themeSwitcher.addEventListener('change', (e)=>{
 
 
 function setTheme(theme){
+
+    theme = theme || 'theme-light' 
     document.documentElement.className = theme;
     localStorage.setItem('theme', theme);
+    themeSwitcher.value = theme;
 }
